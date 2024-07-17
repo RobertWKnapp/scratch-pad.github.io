@@ -238,7 +238,16 @@ function longest(stringOne, stringTwo) {
  */
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+    var alphabet = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z];
+    for (var i = 0; i <= alphabet.length-1; i++) {
+        if (stringOne[0] > stringTwo[0]){
+            return 1;
+        } else if (stringOne[0] < stringTwo[0]) {
+            return -1;
+        } else if (stringOne[0] === stringTwo[0]) {
+            return 0;
+        }
+    }
 
 
     // YOUR CODE ABOVE HERE //
