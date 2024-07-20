@@ -119,12 +119,20 @@ function beginsWith(string, char) {
     // compare single character with first character of string
         // remove the first character of the string
             // compare it to the given character with an equal, not absolue equals
-            // use beginsWith()
+            
     //return  string.beginsWith(char);  
-    
+
+       var firstChar = string[0].toUpperCase();
+   var secondChar = char.toUpperCase();
+ if (firstChar == secondChar){
+   return true;
+ } else {
+   return false;
+ }
+ }
 
     // YOUR CODE ABOVE HERE //
-}
+
 
 /**
  * Given an input String and a single character, return true if the String
@@ -149,9 +157,20 @@ function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
     // pop the last letter off the string and compare to character
     // use endsWith() to compare
-    return string.endsWith(char);
+    //return string.endsWith(char);
 
     // YOUR CODE ABOVE HERE //
+    // create a var for the first string char and the char to have a home in upper or lower case
+    // use length - 1 for the last letter
+    // if else if those new vars are equal
+    // if equal then true, else false.
+    var lastChar = string[string.length - 1].toUpperCase();
+    var secondChar = char.toUpperCase();
+  if (lastChar == secondChar){
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -223,7 +242,15 @@ function longest(stringOne, stringTwo) {
     // compare number of characters in each string
         // use .length
         // set up a var
-    var isLonger = longest(stringOne.length > stringTwo.length);
+    //var isLonger = longest(stringOne.length > stringTwo.length);
+    var one = stringOne.length
+    var two = stringTwo.length
+    // compare the two lengths and return the longer
+    if (one > two) {
+        return stringOne;
+    } else {
+        return stringTwo;
+    }
 
 
     // YOUR CODE ABOVE HERE //
@@ -236,20 +263,34 @@ function longest(stringOne, stringTwo) {
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
+/**
+ * I: function gives two strings
+ * O: return 1 if stringOne is longer, -1 if the second is longer and 0 if strings are equal 
+ * C: n/a
+ * E: n/a
+ */
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-    var alphabet = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z];
-    for (var i = 0; i <= alphabet.length-1; i++) {
-        if (stringOne[0] > stringTwo[0]){
-            return 1;
-        } else if (stringOne[0] < stringTwo[0]) {
-            return -1;
-        } else if (stringOne[0] === stringTwo[0]) {
-            return 0;
-        }
+    // for (var i = 0; i <= alphabet.length-1; i++) {
+    //     if (stringOne[0] > stringTwo[0]){
+    //         return 1;
+    //     } else if (stringOne[0] < stringTwo[0]) {
+    //         return -1;
+    //     } else if (stringOne[0] === stringTwo[0]) {
+    //         return 0;
+    //     }
+    // }
+    // create two variables to put the first letter of each string into
+    var one = stringOne[0];
+    var two = stringTwo[0];
+    // compare the two strings
+    if (one > two) {
+      return "1";
+    } else if (two > one) {
+      return "-1";
+    } else{
+      return "0";
     }
-
-
     // YOUR CODE ABOVE HERE //
 }
 
@@ -260,6 +301,12 @@ function sortAscending(stringOne, stringTwo) {
  * first, and return 0 if they're equal.
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
+ */
+/**
+ *  I: function gives two strings
+ * O: return 1 if string one is alphabetically lower, return -1 if string two is lower and 0 if they are equal
+ * C: n/a
+ * E: n/a
  */
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
