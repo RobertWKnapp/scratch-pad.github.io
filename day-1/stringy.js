@@ -284,12 +284,12 @@ function sortAscending(stringOne, stringTwo) {
     //var one = stringOne[0];
    // var two = stringTwo[0];
     // compare the two strings
-    if (stringOne > stringTwo) {
+    if (stringTwo > stringOne) {
       return 1;
-    } else if (stringTwo > stringOne) {
+    } else if (stringTwo < stringOne) {
       return -1;
     } else{
-      return 0;
+        return 0;
     }
     // YOUR CODE ABOVE HERE //
 }
@@ -311,9 +311,9 @@ function sortAscending(stringOne, stringTwo) {
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     if (stringOne < stringTwo) {
-        return 1;
-      } else if (stringTwo > stringOne) {
         return -1;
+      } else if (stringOne > stringTwo) {
+        return 1;
       } else{
         return 0;
       }
@@ -322,7 +322,7 @@ function sortDescending(stringOne, stringTwo) {
 
 
     // YOUR CODE ABOVE HERE //
-}
+
 
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////

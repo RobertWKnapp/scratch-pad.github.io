@@ -20,24 +20,30 @@
  */
 /**
  * I: Function named reverseString takes a string as it's only input
- * ): A new string is returned in reverse order
+ * O: A new string is returned in reverse order
  * C: Use a loop, create a var to collect output
+ * E: n/a
  */
 function reverseString(input) {
     // YOUR CODE GOES BELOW HERE //
     // create var to put data in
-    let inputRev = "";
-    //  use a for loop to go through the string in reverse and put them in the var.
-    for (let i = input.length - 1; i >= 0, i--) {
-      // var inputRev to add each new i
-      inputRev += input[i];
-    }
-    // return inputRev
-    return(inputRev);
-
-    
-    
-    
+    // var inputRev;
+    // //  use a for loop to go through the string in reverse and put them in the var.
+    // for (let i = input.length - 1; i >= 0, i--) {
+    //   // var inputRev to add each new i
+    //   inputRev += input[i];
+    // }
+    // // return inputRev
+    // return(inputRev);
+      // split the input string into individual characters
+  var splitString = input.split('');
+  var reverseInput = splitString.reverse();
+  var joinInput = reverseInput.join('');
+  // for (let i = input.length - 1; i >=0, i--) {
+  //   inputRev += input[i];
+  // }
+  // return inputRev;
+  return joinInput;
     // YOUR CODE GOES ABOVE HERE //
 }
 

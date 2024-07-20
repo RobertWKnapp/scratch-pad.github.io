@@ -10,8 +10,29 @@
  *  c. AND for the multiples of five print “Buzz”.
  *  d. FINALLY, for numbers which are multiples of both three and five print “FizzBuzz”.
 */
+/**
+ * I: No input
+ * O: prints 1-100 with multiples of three as " Fizz", multiples of "Five" as Buzz and multiples of 15 as "FizzBuzz"
+ * C: n/a
+ * E: n/a
+ */
 function fizzBuzz() {
     // YOUR CODE GOES BELOW HERE //
+// prints 1-100 in an array
+for (var i = 1; i <= 100; i++) {
+    // if else starting with the multiples of 15
+    // if (i % 3 && i % 5) {
+    //   return "FizzBuzz";
+    //   // variables of 3
+    // } else if (i % 3 === 0) {
+    //     return "Fizz";
+    //     //variables of 5
+    //   } else if (i % 5 === 0) {
+    //     return "Buzz";
+    //     // remaining numbers
+    //   } else
+    //     return(i);
+    // }
 
 
 
