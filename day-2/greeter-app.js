@@ -41,16 +41,17 @@
 
 function greeter(hour) {
     // YOUR CODE BELOW HERE //
-   // For (var i = 1; i <= 24; i++) {
-        if (i <= 11)
+    //For (var i = 1; i <= 24; i++) {
+
+        if (hour <= 11)
         console.log("Good Morning!");
-    else if (i >= 12 && i <= 16)
+    else if (hour >= 12 && hour <= 16)
     console.log("Good Afternoon!");
-else if (i >= 17 && i <= 21)
+else if (hour >= 17 && hour <= 21)
 console.log('Good Evening!');
-else if (i >= 22 && i <= 24)
+else if (hour >= 22 && hour <= 24)
 console.log ('Good Night!');
-       // }
+      //  }
     // YOUR CODE ABOVE HERE //
 }
 
