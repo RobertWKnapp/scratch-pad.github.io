@@ -32,19 +32,25 @@
  *   c. The tests are CASE sensitive, so you MUST console.log('Good Night!') with
  *      the exact case.
  */
+/**
+ * I: The hour of the day
+ * O: A greeting that depends on what hour it is.
+ * C: use if, else-if, and else.
+ * E: n/a
+ */
 
 function greeter(hour) {
     // YOUR CODE BELOW HERE //
-    For (var i = 1; i <= 24; i++) {
+   // For (var i = 1; i <= 24; i++) {
         if (i <= 11)
         console.log("Good Morning!");
     else if (i >= 12 && i <= 16)
     console.log("Good Afternoon!");
 else if (i >= 17 && i <= 21)
 console.log('Good Evening!');
-else if (i >= 22 && <= 24)
+else if (i >= 22 && i <= 24)
 console.log ('Good Night!');
-        }
+       // }
     // YOUR CODE ABOVE HERE //
 }
 
@@ -59,7 +65,7 @@ console.log ('Good Night!');
  * var hour = today.getHours();
  */
 
-greeter(11);
+greeter(5);
 
 
 
