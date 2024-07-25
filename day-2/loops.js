@@ -11,18 +11,21 @@
  * using console.log().
  */
 /**
- * I:
+ * I: given an input array
+ * O: Loop forward over the array and print its values.
+ * C: print values using console.log
+ * E: n/a
  */
 
 function printArrayValues(array) {
   // YOUR CODE BELOW HERE //
-  
+
   for ( let i = 0; i < array.length; i++) {
     let loops = array(i);
     
   }
   console.log(loops);
-  
+  printArrayValues(3, 5, 7, 9);
   // YOUR CODE ABOVE HERE //
 }
 
@@ -32,11 +35,11 @@ function printArrayValues(array) {
  */
 function printArrayValuesInReverse(array) {
   // YOUR CODE BELOW HERE //
-  
-  for(var i = array.length - 1; i >= 0, i--) {
-    console.log(i);
+  var reverse = [];
+  for(var i = array.length - 1; i >= 0; i--) {
+    reverse.shift(input(i));
   }
-  
+  console.log(reverse);
   
   // YOUR CODE ABOVE HERE //
 }
