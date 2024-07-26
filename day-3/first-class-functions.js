@@ -11,6 +11,12 @@
  * return a Function that tests whether a given value is greater than the 
  * base.
  */
+/**
+ * I: an input base is given to test against
+ * O: return a function that tests whether a given value is greater than the input base.
+ * C: n/a
+ * E: n/a
+ */
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
     
@@ -87,6 +93,12 @@ function modifyStrings(strings, modify) {
  * begin with "C", or they are all exclaimations that end with "!".
  * 
  * TIP: You need to loop over the Strings, right? And pass them to the test?
+ */
+/**
+ * I: given an array of strings and a function designed to test the string
+ * O: return a boolean whether string passed the function.  True if all strings pass
+ * C: n/a
+ * E: n/a
  */
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //

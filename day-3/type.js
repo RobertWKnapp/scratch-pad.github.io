@@ -14,9 +14,16 @@
  * 
  * HINT: There is a method that can help with this.
  */
+/**
+ * I: given an input value
+ * O: return true if the value is an array, else false
+ * C: n/a
+ * E: n/a
+ */
 function isArray(value) {
     // YOUR CODE BELOW HERE //
-    
+    if(Array.isArray(value)) return true;
+    else return false;
     
     
     
@@ -32,11 +39,18 @@ function isArray(value) {
  * with typeof.
  * 
  */
+/**
+ * I: Given an input value
+ * O: If the value is an object return true, else false
+ * C: n/a
+ * E: n/a
+ */
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-    
-
-    
+    if(Array.isArray(value)) return false;
+    if(value === null) return false;
+    if(value instanceof Date) return false;
+    if(typeof value === "object") return true;    
     
     // YOUR CODE ABOVE HERE //
 }
@@ -49,9 +63,18 @@ function isObject(value) {
  * 
  * TIP: Similar to isObject, but we must return true if the value is an Array.
  */
+/**
+ * I: given an input value
+ * O: return true if it is an Object or Array intended as a collection. return false otherwise
+ * C: n/a
+ * E: n/a
+ */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    
+    if(Array.isArray(value)) return true;
+    if(value === null) return false;
+    if(value instanceof Date) return false;
+    if(typeof value === "object") return true;  
     
     
     
@@ -77,9 +100,18 @@ function isCollection(value) {
  *    typeOf("javascript") -> "string"
  *    typeOf([1,2,3]) -> "array"
  */ 
+/**
+ * I: input value is given.
+ * O: return the value type now as the value of a string
+ * C: n/a
+ * E: n/a
+ */
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
-    
+    var stringValue = [];
+    for(var i = 0, i < value.length, i++) {
+        push.string(i);
+    }
     
     
     

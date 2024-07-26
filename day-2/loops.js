@@ -19,19 +19,24 @@
 
 function printArrayValues(array) {
   // YOUR CODE BELOW HERE //
-
+ var newArray = [];
   for ( let i = 0; i < array.length; i++) {
-    let loops = array(i);
-    
+    newArray.push(i);
   }
-  console.log(loops);
-  printArrayValues(3, 5, 7, 9);
+  console.log(newArray);
+
   // YOUR CODE ABOVE HERE //
 }
 
 /** 
  * Given an input Array, loop backwards over the Array and print its values 
  * using console.log().
+ */
+/**
+ * I: Given an input array
+ * O: Loop backwards over the array printing its values
+ * C: use Console.log
+ * E: n/a
  */
 function printArrayValuesInReverse(array) {
   // YOUR CODE BELOW HERE //
@@ -47,12 +52,19 @@ function printArrayValuesInReverse(array) {
 /** 
  * Given an input Object, return an Array containing the Object keys.
  */
+/**
+ * I: given an input object
+ * O: Return an array containg the object keys
+ * C: n/a
+ * E: n/a
+ */
 function getObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
-  
+  var newKeys = [];
+  for (var key in object) {
+   
+  }
+  console.log(newKeys);  
   // YOUR CODE ABOVE HERE //
 }
 
@@ -60,9 +72,17 @@ function getObjectKeys(object) {
  * Given an input Object, loop over the Object and print its keys 
  * using console.log().
  */
+/**
+ * I: input object
+ * O: loop over the object and print its keys
+ * C: use console.log
+ * E: n/a
+ */
 function printObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
+  for (var key in object) {
+    console.log(key);
+  }
   
   
   
@@ -72,9 +92,21 @@ function printObjectKeys(object) {
 /** 
  * Given an input Object, return an Array containing the Object's values.
  */
+/**
+ * I: input is an object
+ * O: return an array containing the object's values
+ * C: n/a
+ * E: n/a
+ */
 function getObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
+  var objectValues = [];
+  // for(var key in object) {
+  // }
+  for(var i = 0, i < input.length; i++)
+  objectValues.push(object[i]);
+return objectValues;
+  console.log(objectValues)
   
   
   
@@ -85,9 +117,20 @@ function getObjectValues(object) {
  * Given an input Object, loop over the Object and print its values 
  * using console.log().
  */
+/**
+ * I: input is an object
+ * O: Loop over the object and print its values
+ * C: using console.log
+ * E: n/a
+ */
 function printObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
+  var objectsValues = [];
+  for(key in object){
+    
+
+  }
+  console.log(objectValues);
   
   
   
@@ -97,9 +140,18 @@ function printObjectValues(object) {
 /** 
  * Given an input Object, return the number of key/value pairs stored within that Object.
  */
+/**
+ * I: an object is given
+ * O: return the number of key/value pairs stored within that object
+ * C: n/a
+ * E: n/a
+ */
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
-  
+  var pairNumbers = 
+  for(var key in object){ 
+
+  }
   
   
   
@@ -110,8 +162,19 @@ function getObjectLength(object) {
  * Given an input Object, how might we loop over the Object IN REVERSE and 
  * print its values using console.log()?
  */
+/**
+ * I: an object is the given input
+ * O: Loop over the object in reverse and print the objects
+ * C: use console.log
+ * E: n/a
+ *
+ */
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
+  var newReverseObject = [];
+  for(var key in object) {
+
+  }
   
   
   
