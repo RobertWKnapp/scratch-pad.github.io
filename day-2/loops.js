@@ -168,13 +168,14 @@ function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
   var newReverseObject = [];
   for(var key in object) {
-newReverseObject.push(key);
+newReverseObject.push(object[key]);
   }
-  let newerReversedObject = newReverseObject.reverse()
-  console.log(newerReversedObject);
+  for(var i = newReverseObject.length - 1; i >= 0; i--) {
+    console.log(newReverseObject[i]);
+  }
   
-  
-  
+    //let newerReversedObject = newReverseObject.reverse([])
+  //console.log(newReverseObject.reverse());
   // YOUR CODE ABOVE HERE //
 }
 
