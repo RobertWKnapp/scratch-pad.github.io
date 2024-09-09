@@ -75,10 +75,15 @@ return string.toUpperCase();
  *
  *      See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Using_global_and_ignore_with_replace()
  */
+//  * I: function takes in a string
+//  * O: function returns string with a dash in place of the space and the upper case are now lower case
+//  * C: n/a
+//  * E: n/a
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
 
-return string.split;
+//return string.split;
+return string.replace(/\s+/g, "-").toLowerCase();
 
     // YOUR CODE ABOVE HERE //
 }
@@ -95,10 +100,22 @@ return string.split;
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
  */
+//  *  I: Function takes in a string and a single character
+//  *  O: Return true if the string begins with the character, return false if not
+//  *  C: function is case insensitive
+//  *  E: n/a
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
 
-    
+    //return string.beginsWith(char);
+    var firstChar = string[0].toUpperCase();
+    var secondChar = char.toUpperCase();
+    if (firstChar == secondChar){
+        return true;
+    }
+    else {
+        return false;
+    }
 
     // YOUR CODE ABOVE HERE //
 }
@@ -115,11 +132,21 @@ function beginsWith(string, char) {
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
  */
+//  *  I: Function takes in a string and a single character
+//  *  O: Return true if the string ends with the character, return false if not
+//  *  C: function is case insensitive
+//  *  E: n/a
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
 
-
-
+var lastChar = string[string.length - 1].toUpperCase();
+var secondChar = char.toUpperCase();
+if(lastChar == secondChar){
+    return true;
+}
+else {
+    return false;
+}
     // YOUR CODE ABOVE HERE //
 }
 
@@ -128,10 +155,16 @@ function endsWith(string, char) {
  *
  * TIP: What's the operator to concatenate two Strings?
  */
+//  I: function is given any number of strings
+//  O: function is to return all of the strings joined/concatenated together
+//  C: n/a
+//  E: n/a
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
-
+//return stringOne.concat(stringTwo);
+var args = Array.from(arguments);
+return args.join('');
 
     // YOUR CODE ABOVE HERE //
 }
@@ -146,10 +179,14 @@ function concat(stringOne, stringTwo) {
  * TIP: This Function pulls out all the arguments passed to it and stores them
  *      in an Array called args.
  */
+//  * I: function is given any number of strings
+//  *  O: function is to return all of the strings joined/concatenated together
+//  * C: n/a
+//  * E: n/a
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
-
+    return args.join('');
 
     // YOUR CODE ABOVE HERE //
 }
@@ -165,7 +202,14 @@ function join(stringOne, stringTwo) {
  */
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+var one = stringOne.length
+var two = stringTwo.length
+if (one > two){
+return stringOne;
+}
+else {
+    return stringTwo;
+}
 
 
     // YOUR CODE ABOVE HERE //
