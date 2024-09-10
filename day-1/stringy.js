@@ -222,10 +222,30 @@ else {
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
+//  * I: function gives two strings
+//  * O: return 1 if stringOne is longer, -1 if the second is longer and 0 if strings are equal 
+//  * C: n/a
+//  * E: n/a
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
+// for (var i = 0; i <= alphabet.length - 1; i++)
+// if (stringOne[i] > stringTwo[i]){
+//     return 1;
+// } else if (stringOne[i] < stringTwo[i]) {
+//     return -1;
+// } else if (stringOne[i] === stringTwo[i]) {
+//     return 0
+// }
 
-
+var one = stringOne[0];
+var two = stringTwo[0];
+if (stringTwo > stringOne){
+    return 1;
+} else if (stringTwo < stringOne) {
+    return -1; 
+} else {
+    return 0;
+}
 
     // YOUR CODE ABOVE HERE //
 }
@@ -238,9 +258,19 @@ function sortAscending(stringOne, stringTwo) {
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
+//  *  I: function gives two strings
+//  * O: return 1 if string one is alphabetically lower, return -1 if string two is lower and 0 if they are equal
+//  * C: n/a
+//  * E: n/a
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+if (stringOne < stringTwo) {
+    return -1;
+} else if (stringOne > stringTwo) {
+    return 1;
+} else {
+    return 0;
+}
 
 
 
