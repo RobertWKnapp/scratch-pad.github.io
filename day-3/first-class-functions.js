@@ -13,7 +13,7 @@
  */
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
+    // go back through the video of the day and see if answer is here.
    
     
     // YOUR CODE ABOVE HERE //
@@ -28,9 +28,11 @@ function createGreaterThanFilter(base) {
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
     
-  
+   // go back through the video of the day and see if answer is here.
     
-    
+    return function (value) {
+    return value > base;
+    }
     // YOUR CODE ABOVE HERE //
 }
 
@@ -44,7 +46,9 @@ function createLessThanFilter(base) {
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
     
-    
+    return function(){
+
+    }
     
     
     // YOUR CODE ABOVE HERE //
@@ -76,7 +80,7 @@ function createEndsWithFilter(endsWith) {
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
     
-    
+    // see slack  as well as see class video
     
     
     // YOUR CODE ABOVE HERE //
@@ -97,7 +101,7 @@ function modifyStrings(strings, modify) {
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
     
-    
+   // see slack as well as see class video 2:57pm
     
     
     // YOUR CODE ABOVE HERE //
