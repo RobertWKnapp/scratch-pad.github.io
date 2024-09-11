@@ -81,7 +81,13 @@ function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
     
     // see slack  as well as see class video
+    // var uppercase = modifyStrings(['alex', 'francis'], function(string){
+    //     return string.toUpperCase();
+    // }); // ['ALEX', 'FRANCIS']
     
+    // var addedExclamation = modifyStrings(['alex', 'francis'], function(string){
+    //     return string + "!";
+    // }); // ['alex!', 'francis!']
     
     // YOUR CODE ABOVE HERE //
 }
@@ -102,7 +108,13 @@ function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
     
    // see slack as well as see class video 2:57pm
-    
+//    var beginsWithA = allStringsPass(['alex', 'aaron'], function(str){
+//        return str[0] === 'a';
+//    }); // true (because all strings begin with A)
+   
+//    var fiveOrMoreLetters = allStringsPass(['alex', 'francis', 'aaron'], function(str){
+//        return str.length > 4;
+//    }); // false (because alex's length is less than 5)
     
     // YOUR CODE ABOVE HERE //
 }
