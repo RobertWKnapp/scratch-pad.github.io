@@ -40,12 +40,16 @@ function isArray(value) {
  */
 function isObject(value) {
     // YOUR CODE BELOW HERE //  
-
+// Array will test positive for Object if used with typeof; use Array.isArray()
       if (Array.isArray(value)) return false;
+      // Null will test positive; use strict comparison
     if (value === null) return false;
+    // Date will test positive for object if used with tyepof; use instanceof
   if (value instanceof Date) return false;
   if (value === undefined) return false;
+  // now clear to use type of on any other value to see if it is an object
   if (typeof value === 'object') return true;  
+  if(typeof value !== 'object') return false;
     
     // YOUR CODE ABOVE HERE //
 }
@@ -67,6 +71,7 @@ function isCollection(value) {
  if (value === null) return false;
  if (value instanceof Date) return false;
  if (typeof value === 'object') return true;
+ if (typeof value !== 'object') return false;
     
     
     // YOUR CODE ABOVE HERE //

@@ -15,9 +15,16 @@ const { stubTrue } = require("lodash");
  */
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    // go back through the video of the day and see if answer is here.
+    // if base is a string convert it to a number:
+    var baseNum = Number(base);
+    // return a function that checks if input value is greater than the base
    return function(value) {
-    return value > base;
+    // make sure value is not a string
+    var valueNum = Number(value);
+    // return true or false if value is greater than base
+     return valueNum > baseNum;
+    // if (value > base) 
+    // return ""
    }
     
     // YOUR CODE ABOVE HERE //
@@ -31,8 +38,12 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
-   // go back through the video of the day and see if answer is here.
+    // if base is a string convert it to a number
+    var baseNum = Number(base)
+    return function(value) {
+        var valueNum = Number(value);
+        return valueNum > baseNum;
+    }
     
     return function (value) {
     return value < base;
@@ -49,9 +60,14 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    
-    return function(startsWith){
+// make sure startsWith is lowercase
+var startsWithLower = startsWith.toLowerCase();
 
+    return function(valueString){
+// this needs to be lower case for a comparison
+var valueStringLower = valueString.toLowerCase();
+//  Check if string starts with the char and return the boolean
+ return valueStringLower.startsWith(startsWithLower);
     }
     
     
@@ -67,9 +83,11 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    
-    
-    return function() {
+    var endsWithLower = endsWith.toLowerCase();
+        
+    return function(newString) {
+        var newNewString = newString.toLowerCase();
+        return newNewString.endswith(endsWithLower);
 
     }
     
@@ -85,12 +103,16 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
+    // create a variable that is an empty array to collect modified strings
     var stringsModified = [];
-
+    // using a for loop; loop through the array
     for (let i = 0; i < strings.length; i++) {
+        // apply modify to each string as it loops
         var stringModified = modify(strings[i]);
+        // push the modified strings to the array
         stringsModified.push(stringModified);
     }
+    // return the modified strings array
     return stringsModified;
     
     // see slack  as well as see class video
