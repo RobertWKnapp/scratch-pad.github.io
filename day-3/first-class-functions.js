@@ -51,114 +51,114 @@ function createLessThanFilter(base) {
     // YOUR CODE ABOVE HERE //
 }
 
-/** 
- * Given a startsWith character, which will be a single character, return a 
- * Function that tests whether a given String starts with the startsWith 
- * character.
- * 
- * This function needs to be case insensitive.
- */
-function createStartsWithFilter(startsWith) {
-    // YOUR CODE BELOW HERE //
-// make sure startsWith is lowercase
-var startsWithLower = startsWith.toLowerCase();
+// /** 
+//  * Given a startsWith character, which will be a single character, return a 
+//  * Function that tests whether a given String starts with the startsWith 
+//  * character.
+//  * 
+//  * This function needs to be case insensitive.
+//  */
+// function createStartsWithFilter(startsWith) {
+//     // YOUR CODE BELOW HERE //
+// // make sure startsWith is lowercase
+// var startsWithLower = startsWith.toLowerCase();
 
-    return function(valueString){
-// this needs to be lower case for a comparison
-var valueStringLower = valueString.toLowerCase();
-//  Check if string starts with the char and return the boolean
- return valueStringLower.startsWith(startsWithLower);
-    }
+//     return function(valueString){
+// // this needs to be lower case for a comparison
+// var valueStringLower = valueString.toLowerCase();
+// //  Check if string starts with the char and return the boolean
+//  return valueStringLower.startsWith(startsWithLower);
+//     }
     
     
-    // YOUR CODE ABOVE HERE //
-}
+//     // YOUR CODE ABOVE HERE //
+// }
 
-/** 
- * Given a endsWith character, which will be a single character, return a 
- * Function that tests whether a given String ends with the endsWith 
- * character.
- * 
- * This function needs to be case insensitive.
- */
-function createEndsWithFilter(endsWith) {
-    // YOUR CODE BELOW HERE //
-    var endsWithLower = endsWith.toLowerCase();
+// /** 
+//  * Given a endsWith character, which will be a single character, return a 
+//  * Function that tests whether a given String ends with the endsWith 
+//  * character.
+//  * 
+//  * This function needs to be case insensitive.
+//  */
+// function createEndsWithFilter(endsWith) {
+//     // YOUR CODE BELOW HERE //
+//     var endsWithLower = endsWith.toLowerCase();
         
-    return function(newString) {
-        var newNewString = newString.toLowerCase();
-        return newNewString.endswith(endsWithLower);
+//     return function(newString) {
+//         var newNewString = newString.toLowerCase();
+//         return newNewString.endswith(endsWithLower);
 
-    }
+//     }
     
-    // YOUR CODE ABOVE HERE //
-}
+//     // YOUR CODE ABOVE HERE //
+// }
 
-/** 
- * Given an Array of Strings and a Function designed to modify a String, 
- * return the Array of the Strings, modified.
- * 
- * TIP: You need to loop over the Strings, right? We need to pass each String to 
- * the modify Function, but we need to collect the results into some collection.
- */
-function modifyStrings(strings, modify) {
-    // YOUR CODE BELOW HERE //
-    // create a variable that is an empty array to collect modified strings
-    var stringsModified = [];
-    // using a for loop; loop through the array
-    for (let i = 0; i < strings.length; i++) {
-        // apply modify to each string as it loops
-        var stringModified = modify(strings[i]);
-        // push the modified strings to the array
-        stringsModified.push(stringModified);
-    }
-    // return the modified strings array
-    return stringsModified;
+// /** 
+//  * Given an Array of Strings and a Function designed to modify a String, 
+//  * return the Array of the Strings, modified.
+//  * 
+//  * TIP: You need to loop over the Strings, right? We need to pass each String to 
+//  * the modify Function, but we need to collect the results into some collection.
+//  */
+// function modifyStrings(strings, modify) {
+//     // YOUR CODE BELOW HERE //
+//     // create a variable that is an empty array to collect modified strings
+//     var stringsModified = [];
+//     // using a for loop; loop through the array
+//     for (let i = 0; i < strings.length; i++) {
+//         // apply modify to each string as it loops
+//         var stringModified = modify(strings[i]);
+//         // push the modified strings to the array
+//         stringsModified.push(stringModified);
+//     }
+//     // return the modified strings array
+//     return stringsModified;
     
-    // see slack  as well as see class video
-    //  var uppercase = modifyStrings(strings, modify, function(string){
-    //     return string.toUpperCase();
-    //  }); // ['ALEX', 'FRANCIS']
+//     // see slack  as well as see class video
+//     //  var uppercase = modifyStrings(strings, modify, function(string){
+//     //     return string.toUpperCase();
+//     //  }); // ['ALEX', 'FRANCIS']
     
-    //  var addedExclamation = modifyStrings(strings, modify, function(string){
-    //      return string + "!";
-    //  }); // ['alex!', 'francis!']
+//     //  var addedExclamation = modifyStrings(strings, modify, function(string){
+//     //      return string + "!";
+//     //  }); // ['alex!', 'francis!']
     
-    // YOUR CODE ABOVE HERE //
-}
+//     // YOUR CODE ABOVE HERE //
+// }
 
 
 
 
-/** 
- * Given an Array of Strings and a Function designed to test the String in some 
- * way and return a Boolean on whether it passed, return true if ALL Strings pass the test.
- * 
- * Imagine you had a list of names, and you wanted to test they all 
- * begin with "C", or they are all exclaimations that end with "!".
- * 
- * TIP: You need to loop over the Strings, right? And pass them to the test?
- */
-function allStringsPass(strings, test) {
-    // YOUR CODE BELOW HERE //
+// /** 
+//  * Given an Array of Strings and a Function designed to test the String in some 
+//  * way and return a Boolean on whether it passed, return true if ALL Strings pass the test.
+//  * 
+//  * Imagine you had a list of names, and you wanted to test they all 
+//  * begin with "C", or they are all exclaimations that end with "!".
+//  * 
+//  * TIP: You need to loop over the Strings, right? And pass them to the test?
+//  */
+// function allStringsPass(strings, test) {
+//     // YOUR CODE BELOW HERE //
     
-    var (i = 0; i < strings.length; i++)
-    // if, apply function to the [i] and return true if true and then return false if false
-    if (test(strings[i])) {
-        return true;
-    }
-    return false;
-   // see slack as well as see class video 2:57pm
-//    var beginsWithA = allStringsPass(['alex', 'aaron'], function(str){
-//        return str[0] === 'a';
-//    }); // true (because all strings begin with A)
+//     var (i = 0; i < strings.length; i++)
+//     // if, apply function to the [i] and return true if true and then return false if false
+//     if (test(strings[i])) {
+//         return true;
+//     }
+//     return false;
+//    // see slack as well as see class video 2:57pm
+// //    var beginsWithA = allStringsPass(['alex', 'aaron'], function(str){
+// //        return str[0] === 'a';
+// //    }); // true (because all strings begin with A)
    
-//    var fiveOrMoreLetters = allStringsPass(['alex', 'francis', 'aaron'], function(str){
-//        return str.length > 4;
-//    }); // false (because alex's length is less than 5)
+// //    var fiveOrMoreLetters = allStringsPass(['alex', 'francis', 'aaron'], function(str){
+// //        return str.length > 4;
+// //    }); // false (because alex's length is less than 5)
     
-    // YOUR CODE ABOVE HERE //
-}
+//     // YOUR CODE ABOVE HERE //
+// }
 
 
 
