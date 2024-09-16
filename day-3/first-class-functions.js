@@ -2,6 +2,8 @@
 
 'use strict';
 
+const { stubTrue } = require("lodash");
+
 /**
  * IN CLASS EXERCISE: FIRST CLASS FUNCTIONS
  */
@@ -14,7 +16,9 @@
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
     // go back through the video of the day and see if answer is here.
-   
+   return function(value) {
+    return value > base;
+   }
     
     // YOUR CODE ABOVE HERE //
 }
@@ -31,7 +35,7 @@ function createLessThanFilter(base) {
    // go back through the video of the day and see if answer is here.
     
     return function (value) {
-    return value > base;
+    return value < base;
     }
     // YOUR CODE ABOVE HERE //
 }
@@ -46,7 +50,7 @@ function createLessThanFilter(base) {
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
     
-    return function(){
+    return function(startsWith){
 
     }
     
@@ -65,7 +69,9 @@ function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
     
     
-    
+    return function() {
+
+    }
     
     // YOUR CODE ABOVE HERE //
 }
@@ -79,15 +85,22 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
+    var stringsModified = [];
+
+    for (let i = 0; i < strings.length; i++) {
+        var stringModified = modify(strings[i]);
+        stringsModified.push(stringModified);
+    }
+    return stringsModified;
     
     // see slack  as well as see class video
-    // var uppercase = modifyStrings(['alex', 'francis'], function(string){
+    //  var uppercase = modifyStrings(strings, modify, function(string){
     //     return string.toUpperCase();
-    // }); // ['ALEX', 'FRANCIS']
+    //  }); // ['ALEX', 'FRANCIS']
     
-    // var addedExclamation = modifyStrings(['alex', 'francis'], function(string){
-    //     return string + "!";
-    // }); // ['alex!', 'francis!']
+    //  var addedExclamation = modifyStrings(strings, modify, function(string){
+    //      return string + "!";
+    //  }); // ['alex!', 'francis!']
     
     // YOUR CODE ABOVE HERE //
 }
@@ -107,6 +120,12 @@ function modifyStrings(strings, modify) {
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
     
+    var (i = 0; i < strings.length; i++)
+    // if, apply function to the [i] and return true if true and then return false if false
+    if (test(strings[i])) {
+        return true;
+    }
+    return false;
    // see slack as well as see class video 2:57pm
 //    var beginsWithA = allStringsPass(['alex', 'aaron'], function(str){
 //        return str[0] === 'a';

@@ -2,6 +2,8 @@
 
 'use strict';
 
+const { stubFalse } = require("lodash");
+
 /**
  * IN CLASS EXERCISE: TYPE
  */
@@ -17,7 +19,7 @@
 function isArray(value) {
     // YOUR CODE BELOW HERE //
     
-    
+    return Array.isArray(value);
     
     
     // YOUR CODE ABOVE HERE //
@@ -37,11 +39,13 @@ function isArray(value) {
  * 
  */
 function isObject(value) {
-    // YOUR CODE BELOW HERE //
-    
+    // YOUR CODE BELOW HERE //  
 
-    
-    
+      if (Array.isArray(value)) return false;
+    if (value === null) return false;
+  if (value instanceof Date) return false;
+  if (value === undefined) return false;
+  if (typeof value === 'object') return true;  
     
     // YOUR CODE ABOVE HERE //
 }
@@ -56,8 +60,13 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    
-    
+    // first check to see if it is an array:
+    if (Array.isArray(value)){
+        return true;
+    } // then see if it is an object intended as a collection
+ if (value === null) return false;
+ if (value instanceof Date) return false;
+ if (typeof value === 'object') return true;
     
     
     // YOUR CODE ABOVE HERE //
@@ -85,7 +94,14 @@ function isCollection(value) {
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
     
-    
+    if (value === null) {
+        return "null";
+    } if (Array.isArray(value)) {
+        return 'array';
+    } if (value instanceof Date) {
+        return "date";
+    } 
+    return typeof value;
     
     
     // YOUR CODE ABOVE HERE //

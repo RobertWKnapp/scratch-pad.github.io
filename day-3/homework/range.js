@@ -21,9 +21,26 @@
  *  b. you'll need a loop, which one is best?
  *  c. you'll wanna make use of the push() method of Array.
  */
+//  * I: a function takes two integers as parameters
+//  * O: returns an Array containing all integers between and including the arguments of the parameters.
+//  * C: if first argument is smaller the range ascends, if the second arguemnt is larger the range decends
+//  * E: n/a
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
-    
+    // Tip a: create something to collect the output
+    let output = [];
+    // Use an if, else if loop to go through the data
+    // first determine if we are going forwards or backwards
+    if (start <= end) {
+    for (let i = start; i <= end; i++){
+        output.push(i);
+    }
+    } else if (start >= end) {
+        for (let i = start; i >= end; i--) {
+            output.push(i);
+        }
+    }
+    return output;
     
     
     
