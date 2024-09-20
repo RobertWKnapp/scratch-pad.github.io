@@ -16,16 +16,18 @@ const { stubTrue } = require("lodash");
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
     // if base is a string convert it to a number:
-    var baseNum = Number(base);
-    // return a function that checks if input value is greater than the base
+//     var baseNum = Number(base);
+//     // return a function that checks if input value is greater than the base
    return function(value) {
-    // make sure value is not a string
-    var valueNum = Number(value);
-    // return true or false if value is greater than base
-     return valueNum > baseNum;
-    // if (value > base) 
-    // return ""
+//     // make sure value is not a string
+return value > base;
+//     var valueNum = Number(value);
+//     // return true or false if value is greater than base
+//      return valueNum > baseNum;
+//     // if (value > base) 
+//     // return ""
    }
+
     
     // YOUR CODE ABOVE HERE //
 }
@@ -39,10 +41,10 @@ function createGreaterThanFilter(base) {
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
     // if base is a string convert it to a number
-    var baseNum = Number(base)
+    // var baseNum = Number(base)
     return function(value) {
-        var valueNum = Number(value);
-        return valueNum > baseNum;
+        // var valueNum = Number(value);
+        return value < base;
     }
     
     return function (value) {
@@ -58,21 +60,23 @@ function createLessThanFilter(base) {
 //  * 
 //  * This function needs to be case insensitive.
 //  */
-// function createStartsWithFilter(startsWith) {
+ function createStartsWithFilter(startsWith) {
 //     // YOUR CODE BELOW HERE //
 // // make sure startsWith is lowercase
-// var startsWithLower = startsWith.toLowerCase();
+ //var startsWithLower = startsWith.toLowerCase();
 
-//     return function(valueString){
+     return function(value){
 // // this needs to be lower case for a comparison
 // var valueStringLower = valueString.toLowerCase();
 // //  Check if string starts with the char and return the boolean
 //  return valueStringLower.startsWith(startsWithLower);
+return typeof value === 'string' && value.charAt(0).toLowerCase() === startsWith.toLowerCase();
 //     }
     
     
 //     // YOUR CODE ABOVE HERE //
-// }
+ }
+ }
 
 // /** 
 //  * Given a endsWith character, which will be a single character, return a 
@@ -81,18 +85,22 @@ function createLessThanFilter(base) {
 //  * 
 //  * This function needs to be case insensitive.
 //  */
-// function createEndsWithFilter(endsWith) {
+ function createEndsWithFilter(endsWith) {
 //     // YOUR CODE BELOW HERE //
-//     var endsWithLower = endsWith.toLowerCase();
-        
+//     var endsWithLower = endsWith.toLowerCase()
 //     return function(newString) {
 //         var newNewString = newString.toLowerCase();
 //         return newNewString.endswith(endsWithLower);
-
 //     }
+return function(value) {
+    // Checking to see if value is a string
+    // compare last character
+    // case insensitive
+    return typeof value === 'string' && value.charAt(value.length - 1).toLowerCase() === endsWith.toLowerCase(); 
+}
     
 //     // YOUR CODE ABOVE HERE //
-// }
+ }
 
 // /** 
 //  * Given an Array of Strings and a Function designed to modify a String, 
@@ -101,9 +109,18 @@ function createLessThanFilter(base) {
 //  * TIP: You need to loop over the Strings, right? We need to pass each String to 
 //  * the modify Function, but we need to collect the results into some collection.
 //  */
-// function modifyStrings(strings, modify) {
-//     // YOUR CODE BELOW HERE //
-//     // create a variable that is an empty array to collect modified strings
+ function modifyStrings(strings, modify) {
+    //     // YOUR CODE BELOW HERE //
+    var modifiedArray = [];
+    
+    for (let i = 0; i < strings.length; i++) {
+        var modifiedString = modify(strings[i]);
+        modifiedArray.push(modifiedString);
+    }
+    
+    return modifiedArray;
+
+    //     // create a variable that is an empty array to collect modified strings
 //     var stringsModified = [];
 //     // using a for loop; loop through the array
 //     for (let i = 0; i < strings.length; i++) {
@@ -123,9 +140,10 @@ function createLessThanFilter(base) {
 //     //  var addedExclamation = modifyStrings(strings, modify, function(string){
 //     //      return string + "!";
 //     //  }); // ['alex!', 'francis!']
+
     
 //     // YOUR CODE ABOVE HERE //
-// }
+ }
 
 
 
@@ -139,7 +157,7 @@ function createLessThanFilter(base) {
 //  * 
 //  * TIP: You need to loop over the Strings, right? And pass them to the test?
 //  */
-// function allStringsPass(strings, test) {
+ function allStringsPass(strings, test) {
 //     // YOUR CODE BELOW HERE //
     
 //     var (i = 0; i < strings.length; i++)
@@ -156,9 +174,16 @@ function createLessThanFilter(base) {
 // //    var fiveOrMoreLetters = allStringsPass(['alex', 'francis', 'aaron'], function(str){
 // //        return str.length > 4;
 // //    }); // false (because alex's length is less than 5)
-    
+
+for (let i = 0; i < strings.length; i++) {
+    if (!test(strings[i])) {
+        return false;
+    }
+}
+return true;
+
 //     // YOUR CODE ABOVE HERE //
-// }
+ }
 
 
 
