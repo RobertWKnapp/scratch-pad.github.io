@@ -35,7 +35,11 @@
 
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
-    
+    return {
+        id: id,
+        nameFirst: nameFirst,
+        nameLast: nameLast
+    }
 } 
 // the function for this is in today's class video
 // look at a. for this information look at class video of create user.
@@ -47,17 +51,33 @@ function makeContactList() {
      * You need something here to hold contacts. See length api for a hint:
      */
     var contacts = [];
-    // 
-
     return {
-        // we implemented the length api for you //
-       length: function() {
-        return contacts.length
-       },
-       addContact: function(contact) {
+        length: function() {
+            return contacts.length;
+        },
+        addContact: function(contact) {
+            contacts.push(contact);
+        },
+        findContact: function(fullName) {
 
-       }
-    }
+            return contacts.find(function(contact) {
+                return contact.nameFirst + ' ' + contact.nameLast === fullName;
+            })
+        },
+        removeContact: function(contact) {
+            const index = contacts.indexOf(contact);
+            if (index !== -1) {
+                contacts.splice(index, 1);
+            }
+        },
+        printAllContactNames: function() {
+            return contacts.map(function(contact) {
+                return contact.nameFirst + ' ' + contact.nameLast;
+            }).join('\n'); // Join with a newline
+        }
+    };
+
+
 }
 // The function is returning an object in data folder there is contact.json
 // assume the array in the data folder.  #1 is what is already input
